@@ -1,10 +1,16 @@
-.hidden {
-    display: none;
+*{
+    box-sizing: border-box;
 }
 
+.hidden {
+    display: none !important;
+}
+
+
+/* Modal stuff */
 .wrapper{
-    height:1200vh;
-    width: 1200vh;
+    height:100vh;
+    width: 100vw;
     background: rgba(0,0,0,0.6);
     position: absolute;
     top: 0;
@@ -12,15 +18,94 @@
 }
 
 .modal {
-
+    
     z-index: 1000;
     height: 480px;
     width: 480px;
     position: fixed;
     top: 20%;
-    left: 25%;
+    left: 35%;
+
+    /* margin and padding */
     margin: 0 auto;
+    padding: 1rem;
+
+    /* border and color */
+    border: 1px solid black;   
+    border-radius: 20%;
     background: white;
-    border: 1px solid black;
+
+
+    /* flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
     
+}
+
+.modal > h1 {
+    margin: 2rem auto;
+}
+
+.modal > form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.modal input[type=text], select {
+    width: 100%;
+    height:2.5rem;
+
+    margin: 0.8rem auto;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    font-size: 1rem;
+
+    background-color: white;
+}
+
+.modal input[type=button]{
+    width: 30%;
+    height: 2.3rem;
+
+    margin: 1rem auto;
+
+    border-radius: 20px;
+
+    background-color: rgba(0, 0, 255, 1);
+    color:white;
+    border: 1px solid black;
+}
+
+.modal input[type=button]:hover {
+    background-color: rgba(0, 0, 255, 0.6);
+}
+
+
+.modal > a {
+    position: absolute;
+    top: -1rem;
+    right: -0.6rem;
+
+    border: 1px solid black;
+    border-radius: 50%;
+
+    background: white;
+
+    padding:0 1.7rem;
+    margin: none;
+
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom:0;
+    left: 50%;
 }

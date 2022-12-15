@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
     <script src="script.js" defer></script>
     <title>Dashboard</title>
 </head>
 <body>
     <div class="wrapper hidden" id="wrapper"></div>
     <div class="modal hidden" id="schedule-transfer">
+        <h1>Schedule Transfer</h1>
+        <a class="close"><h2>X</h2></a>
         <form>
-            <h1>Schedule Transfer</h1>
-            <a class="close"><h2>X</h2></a>
             <div>
-
             <select name="from">
                 <option value="" selected disabled >FROM</option>
                 <option value="">account 1</option>
@@ -41,9 +41,9 @@
         </form>
     </div>
     <div class="modal hidden" id="add-account">
+        <h1>Add Account</h1>
+        <a class="close"><h2>X</h2></a>
         <form>
-            <h1>Add Account</h1>
-            <a class="close"><h2>X</h2></a>
             <div>
             <input type="text" placeholder="Acct Name">
             <select>
@@ -57,22 +57,20 @@
     </div>
     <header>
         <h1>Revature</h1>
+        <ul>
+            <li><a>Accounts</a></li>
+            <li><a>Transactions</a></li>
+            <li><a>Loans</a></li>
+        </ul>
         <nav>
-            <ul>
-                <li><a>Accounts</a></li>
-                <li><a>Transactions</a></li>
-                <li><a>Loans</a></li>
-            </ul>
-        <div>
           <a href="/">Logout</a>
-        </div>
         </nav>
       </header>
       <main>
         <h1>Bob Loblaw's Dash board</h1>
         <div>
-            <div><h3>Checking - 1234</h3><h2>$500,000.21</h2> <button>VIEW</button></div>
-            <div><h3>Savings - 5678</h3><h2>$429.69</h2> <button>VIEW</button></div>
+            <div><div><h3>Checking - 1234</h3><h2>$500,000.21</h2></div> <button>VIEW</button></div>
+            <div><div><h3>Savings - 5678</h3><h2>$429.69</h2></div> <button>VIEW</button></div>
             <a onclick="handleModal(getElementById('add-account'))">OPEN NEW ACCOUNT</a>
         </div>
       </main>
