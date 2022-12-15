@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="wrapper hidden" id="wrapper"></div>
+    <div class="modal hidden" id="schedule-transfer">
+        <form>
+            <h1>Schedule Transfer</h1>
+            <a class="close"><h2>X</h2></a>
+            <div>
+
+            <select name="from">
+                <option value="" selected disabled >FROM</option>
+                <option value="">account 1</option>
+                <option value="">account 2</option>
+            </select>
+
+            <h2>></h2>
+
+            <select name="to">
+                <option value="" selected disabled>TO</option>
+                <option value="">account 1</option>
+                <option value="">account 2</option>
+            </select >
+            
+        </div>
+        <div>
+            <input type="text" placeholder="amount">
+            <input type="datetime-local" name="" id="">
+            <label for="now">Now</label>
+            <input type="checkbox" name="" id="now">
+        </div>
+            <input type="button" value="TRANSFER">
+        </form>
+    </div>
+    <div class="modal hidden" id="add-account">
+        <form>
+            <h1>Add Account</h1>
+            <a class="close"><h2>X</h2></a>
+            <div>
+            <input type="text" placeholder="Acct Name">
+            <select>
+                <option value="" disabled selected>Acct Type</option>
+                <option>Checking</option>
+                <option>Savings</option>
+            </select>
+        </div>
+            <input type="button" value="ADD">
+        </form>
+    </div>
+    <header>
+        <h1>Revature</h1>
+        <nav>
+            <ul>
+                <li><a>Accounts</a></li>
+                <li><a>Transactions</a></li>
+                <li><a>Loans</a></li>
+            </ul>
+        <div>
+          <a href="/">Logout</a>
+        </div>
+        </nav>
+      </header>
+      <main>
+        <h1>Bob Loblaw's Dash board</h1>
+        <div>
+            <div><h3>Checking - 1234</h3><h2>$500,000.21</h2> <button>VIEW</button></div>
+            <div><h3>Savings - 5678</h3><h2>$429.69</h2> <button>VIEW</button></div>
+            <a onclick="handleModal(getElementById('add-account'))">OPEN NEW ACCOUNT</a>
+        </div>
+      </main>
+      <footer>&copy;TBD Bank 2047</footer>
+    
+</body>
+</html>
